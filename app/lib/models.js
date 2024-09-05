@@ -46,27 +46,20 @@ const productSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    desc: {
-      type: String,
-      required: true,
-    },
     price: {
       type: Number,
       required: true,
       min: 0,
     },
-    stock: {
-      type: Number,
+    Units: {
+      type: String,
       required: true,
       min: 0,
     },
-    img: {
+    Price: {
       type: String,
     },
-    color: {
-      type: String,
-    },
-    size: {
+    Department: {
       type: String,
     },
   },

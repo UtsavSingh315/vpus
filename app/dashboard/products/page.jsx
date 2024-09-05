@@ -16,18 +16,18 @@ const ProductsPage = async ({ searchParams }) => {
       <div className={styles.top}>
         <Search placeholder="Search for a product..." />
         <Link href="/dashboard/products/add">
-          <button className={styles.addButton}>Add New</button>
+          <button className={styles.addButton}>New Entry</button>
         </Link>
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Title</td>
-            <td>Description</td>
+            <td>Name</td>
+            {/* <td>Description</td> */}
             <td>Price</td>
-            <td>Created At</td>
-            <td>Stock</td>
-            <td>Action</td>
+            {/* <td>Created At</td> */}
+            <td>Units</td>
+            <td>Department</td>
           </tr>
         </thead>
         <tbody>
@@ -35,20 +35,14 @@ const ProductsPage = async ({ searchParams }) => {
             <tr key={product.id}>
               <td>
                 <div className={styles.product}>
-                  <Image
-                    src={product.img || "/noproduct.jpg"}
-                    alt=""
-                    width={40}
-                    height={40}
-                    className={styles.productImage}
-                  />
                   {product.title}
                 </div>
               </td>
-              <td>{product.desc}</td>
-              <td>${product.price}</td>
+              {/* <td>{product.desc}</td> */}
+              <td>${product.Price}</td>
+              <td>${product.units}</td>
               <td>{product.createdAt?.toString().slice(4, 16)}</td>
-              <td>{product.stock}</td>
+              <td>{product.Department}</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/products/${product.id}`}>

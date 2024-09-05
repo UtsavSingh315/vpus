@@ -56,9 +56,6 @@ const productSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
-    Price: {
-      type: String,
-    },
     Department: {
       type: String,
     },

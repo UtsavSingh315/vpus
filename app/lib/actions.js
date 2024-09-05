@@ -70,7 +70,7 @@ export const updateUser = async (formData) => {
 };
 
 export const addProduct = async (formData) => {
-  const { title, Department, Price, Units } = Object.fromEntries(formData);
+  const { title, Department, price, Units } = Object.fromEntries(formData);
 
   try {
     // Ensure database is connected
@@ -79,26 +79,26 @@ export const addProduct = async (formData) => {
     const newProduct = new Product({
       title,
       Department,
-      Price,
+      price,
       Units,
     });
 
     // Save the product
     await newProduct.save();
 
-    // Revalidate and redirect to the correct path
-    revalidatePath("/dashboard/products");
-    redirect("/dashboard/products");
-
+    
   } catch (err) {
     console.log(err);
     throw new Error("Failed to create product!");
   }
+  // Revalidate and redirect to the correct path
+  revalidatePath("/dashboard/products");
+  redirect("/dashboard/products");
 };
 
 // Update a product
 export const updateProduct = async (formData) => {
-  const { id, title, Department, Price, Units } = Object.fromEntries(formData);
+  const { id, title, Department, price, Units } = Object.fromEntries(formData);
 
   try {
     // Ensure database is connected
@@ -108,7 +108,7 @@ export const updateProduct = async (formData) => {
     const updateFields = {
       title,
       Department,
-      Price,
+      price,
       Units,
     };
 
@@ -119,15 +119,15 @@ export const updateProduct = async (formData) => {
 
     // Update product in the database
     await Product.findByIdAndUpdate(id, updateFields);
-
-    // Revalidate and redirect to the correct path
-    revalidatePath("/dashboard/products");
-    redirect("/dashboard/products");
-
+    
   } catch (err) {
     console.log(err);
     throw new Error("Failed to update product!");
   }
+  
+      // Revalidate and redirect to the correct path
+      revalidatePath("/dashboard/products");
+      redirect("/dashboard/products");
 };
 
 // Delete a user

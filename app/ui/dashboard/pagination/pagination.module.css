@@ -5,10 +5,15 @@
 }
 
 .button{
-  padding: 5px 10px;
+  padding: 10px;
+  background-color: #5b8bf2;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .button:disabled{
+  background-color: #becdee;
   cursor: not-allowed;
 }

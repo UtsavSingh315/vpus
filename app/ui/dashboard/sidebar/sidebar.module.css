@@ -50,10 +50,10 @@
   border-radius: 10px;
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 100%;
 }
 
 .logout:hover{
-  background-color: #2e374a;
+  background-color: #5b8bf2;
 }

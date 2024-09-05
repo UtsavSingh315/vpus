@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #2e374a;
+  background-color: #cacdcf;
   padding: 10px;
   border-radius: 10px;
   width: max-content;
@@ -13,4 +13,8 @@
   border: none;
   color: var(--text);
   outline: none;
+  
+}
+.input:focus {
+  outline: red;
 }

@@ -9,9 +9,9 @@ const Transactions = () => {
         <thead>
           <tr>
             <td>Name</td>
-            <td>Status</td>
+            <td></td>
             <td>Date</td>
-            <td>Amount</td>
+            <td>beds</td>
           </tr>
         </thead>
         <tbody>
@@ -19,22 +19,19 @@ const Transactions = () => {
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src="https://images.unsplash.com/photo-1509416277592-079634a2b868?q=80&w=18…"
                   alt=""
                   width={40}
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Aarnav Anand
               </div>
             </td>
             <td>
-              <span className={`${styles.status} ${styles.pending}`}>
-                Pending
-              </span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>241</td>
           </tr>
           <tr>
             <td>
@@ -46,14 +43,13 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                test
               </div>
             </td>
             <td>
-              <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>210</td>
           </tr>
           <tr>
             <td>
@@ -65,38 +61,16 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                srv
               </div>
             </td>
             <td>
-              <span className={`${styles.status} ${styles.cancelled}`}>
-                Cancelled
-              </span>
+              
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>112</td>
           </tr>
-          <tr>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>
-              <span className={`${styles.status} ${styles.pending}`}>
-                Pending
-              </span>
-            </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>
